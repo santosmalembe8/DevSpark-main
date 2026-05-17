@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --font-arial: Arial, Helvetica;
+  --cor-azul: #035090;
+  --cor-fundo: #071a35;
+  --font-titulo2: "titulo2";
+}
+
+body {
+  background: #e2e1e1;
+ overflow-x: hidden;
+}
+
+.cabecalho {
+  /*Incio do header*/
+  backdrop-filter: blur(20px);
+  background: rgba(2, 99, 195, 0.1);
+  display: flex;
+  padding: 10px;
+  height: 60px;
+  margin-left: 4%;
+  border-radius: 50px;
+  width: 93%;
+  position: fixed;
+  top: 5%;
+  z-index: 999;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.cabecalho .nav_bar {
+  /*Inicio do nav*/
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 17%;
+}
+.logotipo {
+  /*Imagem da empresa*/
+  display: flex;
+  position: absolute;
+  left: 4%;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.logotipo img {
+  width: 100px;
+  height: auto;
+}
+
+.cabecalho .nav_bar .nav_lista.show {
+  /*As listas ao aparecer*/
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  border-radius: 30px;
+  padding: 10px;
+  gap: 5px;
+  z-index: 9999;
+  backdrop-filter: blur(20px);
+  background: #071a35;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.cabecalho .nav_bar .nav_lista {
+  /*Listas inicial escondidas*/
+  display: none;
+}
+.cabecalho .nav_bar .nav_lista li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-family: var(--font-arial);
+  font-weight: 800;
+}
+.cabecalho .nav_bar .nav_lista li {
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+.cabecalho .nav_bar .nav_lista li:hover {
+  /*Ao passar o mouse nas li*/
+  background-color: var(--cor-azul);
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.cabecalho .botao_menu {
+  /*div do menu mobile*/
+  display: flex;
+  position: absolute;
+  right: 5%;
+  top: 25%;
+}
+
+.cabecalho .botao_menu button {
+  /*Botão do menu mobile*/
+  background-color: transparent;
+  border: none;
+}
+.cabecalho .botao_menu button .fechar {
+  /*Botão do menu mobile*/
+  display: none;
+}
+.cabecalho .botao_menu.ativo .abrir {
+  display: none;
+}
+.cabecalho .botao_menu.ativo .fechar {
+  display: block;
+}
+
+#boas_vindas {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(21, 21, 21, 0.9);
+  height: 100vh;
+  width: 100%;
+  color: white;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(imagem/fundo/fundo2.png);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+}
+
+#boas_vindas .info h1 {
+  /*Textode boas vindas*/
+  text-align: center;
+  color: white;
+  font-family: var(--font-titulo2);
+  font-weight: bolder;
+  font-size: clamp(55px, 5vw, 65px);
+  text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#boas_vindas .contactos {
+  /*Div que controla os botões da area de boas vindas*/
+  margin-top: 8%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} /*Fim*/
+
+#boas_vindas .contactos button {
+  /*Botões da area de boas vindas*/
+  padding: 15px 30px 15px 30px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 2%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+#boas_vindas .contactos button:hover {
+  /*Ao passar o mouse nos botões*/
+  border: none;
+  background-color: #035090;
+  transition: 0.7s;
+}
+
+#boas_vindas .contactos button a {
+  /*Link dentro dos botões*/
+  color: white;
+  font-family: var(--font-arial);
+  font-weight: 900;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+  display: block;
+}
+/*Fim da sessão boas vindas*/
+
+#servicos {
+  /*Sessão de serviços*/
+  background-color: var(--cor-fundo);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 30px;
+  padding: 20px;
+}
+
+#servicos h1 {
+  /*Titulo da sessão de serviços*/
+  margin-top: 20%;
+  color: white;
+  font-family: var(--font-titulo2);
+}
+#servicos .card_container {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+}
+#servicos .card_container .card {
+  /*Card dos serviços*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: auto;
+  transform: translateY(60px) scale(0.95);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  backdrop-filter: blur(20px);
+  background: rgba(3, 120, 198, 0.2);
+  padding: 20px;
+}
+#servicos .card_container .card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#servicos .card_container .card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.card .info h2 {
+  color: white;
+  font-family: var(--font-arial);
+  margin-top: 3%;
+}
+.card .info p {
+  width: 100%;
+  color: #ccc;
+  font-size: clamp(16px, 3vw, 20px);
+}
+#servicos .card_container .card .imagem img {
+  width: 55px;
+}
+/*Fim da area de serviçõs*/
+
+/*Incio da sessão dos pacotes*/
+#pacotes {
+  margin-top: 5%;
+  scroll-margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+#pacotes .cabeca_pacote h2 {
+  font-family: var(--font-titulo2);
+  font-weight: bolder;
+  color: var(--cor-fundo);
+  font-size: clamp(25px, 2vw, 30px);
+}
+#pacotes .card_container {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#pacotes .card_container .card_pacote {
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 20px;
+  border: none;
+  margin-top: 5%;
+  position: relative;
+  width: 100%;
+}
+#pacotes .card_container .card_pacote .info_pacotes h3 {
+  margin: auto auto 6% auto;
+  font-size: clamp(25px, 2vw, 30px);
+  font-family: var(--font-arial);
+  font-weight: 600;
+}
+#pacotes .card_container .card_pacote .info_pacotes strong {
+  color: var(--cor-azul);
+  font-family: var(--font-arial);
+  font-size: clamp(35px, 2vw, 40px);
+  white-space: nowrap;
+}
+#pacotes .card_container .card_pacote .info_pacotes span {
+  color: var(--cor-azul);
+  font-size: clamp(20px, 1vw, 30px);
+  font-weight: 900;
+  margin-right: 2%;
+}
+#pacotes .card_container .card_pacote .info_pacotes p {
+  font-size: clamp(17px, 2vw, 20px);
+  color: #363535;
+  margin-top: 5%;
+}
+#pacotes .card_container .card_pacote .botao {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pacotes .card_container .card_pacote .botao button {
+  padding: 15px 20px;
+  width: 100%;
+  border: 2px solid var(--cor-azul);
+  border-radius: 25px;
+  background: transparent;
+}
+#pacotes .card_container .card_pacote .botao button:hover {
+  background-color: var(--cor-azul);
+  cursor: pointer;
+}
+#pacotes .card_container .card_pacote .botao button:hover a {
+  color: white;
+  transition: 0.5s;
+}
+#pacotes .card_container .card_pacote .botao button a {
+  color: var(--cor-azul);
+  font-family: var(--font-arial);
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-weight: bolder;
+  font-size: clamp(17px, 2vw, 20px);
+}
+#pacotes .card_container #card2 {
+  border: 2px solid var(--cor-azul);
+  position: relative;
+}
+#pacotes .card_container #card2 button {
+  background-color: var(--cor-azul);
+  margin-top: 20%;
+}
+#pacotes .card_container #card2 button a {
+  color: white;
+}
+
+#pacotes .card_container #card2 > .popular {
+  position: absolute;
+  top: 73%;
+  left: 0;
+  width: 35%;
+  padding: 10px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-color: var(--cor-azul);
+}
+#pacotes .card_container #card3 > .popular {
+  position: absolute;
+  top: 72%;
+  left: 0;
+  width: 35%;
+  padding: 10px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-color: var(--cor-azul);
+}
+
+#pacotes .card_container #card2 .popular h4 {
+  color: white;
+  text-align: center;
+  font-family: var(--font-arial);
+  font-size: clamp(20px, 2vw, 22px);
+}
+#pacotes .card_container #card3 .popular {
+  top: 75%;
+}
+#pacotes .card_container #card3 {
+      border: 2px solid var(--cor-azul);
+}
+#pacotes .card_container #card3 .popular h4 {
+  color: white;
+  text-align: center;
+  font-family: var(--font-arial);
+  font-size: clamp(20px, 2vw, 22px);
+}
+#pacotes .card_container #card3 button {
+  background-color: var(--cor-azul);
+  margin-top: 21%;
+}
+#pacotes .card_container #card3 button a {
+  color: white;
+}
+
+.sugestao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  padding: 10px;
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(imagem/fundo/fundo3.jpg);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+}
+.sugestao .cabeca_sugestao {
+  margin-top: -1%;
+  color: white;
+  font-family: var(--font-titulo2);
+}
+.input_container {
+  position: relative;
+  width: 80%;
+  bottom: -10px;
+}
+.input_container input,
+.input_container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  outline: none;
+  font-size: 17px;
+  margin-top: 6%;
+  border-radius: 20px;
+  background: transparent;
+  color: white;
+  resize: none;
+}
+
+.input_container label {
+  position: absolute;
+  top: 30px;
+  left: 12px;
+  color: #f9f6f6;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/*Wuando clicar para digitar*/
+.input_container input:focus + label,
+.input_container input:valid + label,
+.input_container textarea:focus + label,
+.input_container textarea:valid + label {
+  top: 10.5px;
+  left: 10px;
+  font-size: 12px;
+  padding: 0 4px;
+}
+.input_container textarea {
+  margin-bottom: -20%;
+  height: 100px;
+}
+
+.sugestao .botao {
+  margin-top: 25%;
+  width: 70%;
+}
+.sugestao .botao button {
+  width: 100%;
+  padding: 15px 20px 15px 20px;
+  background: #014e8e;
+  border: none;
+  font-family: var(--font-arial);
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 20px;
+  color: white;
+}
+.sugestao .botao button:hover {
+  background-color: #052c62;
+}
+
+/*Fim da sessão de sugestão*/
+
+/*Inicio da footer dos contactos*/
+
+.header-sroll {
+  background-color: red;
+  backdrop-filter: blur(20px);
+  border: 10px solid red;
+}
+.header-sroll .nav_bar a {
+  color: red;
+}

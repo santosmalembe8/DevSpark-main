@@ -21,7 +21,7 @@ html {
 }
 @font-face {
   font-family:'paragrafo',sans-serif;
-  src: url(font/Titillium/TitilliumMaps29L-400wt.otf);
+  src: url(font/Titillium/TitilliumText22L-250wt.otf);
 }
 
 body {
@@ -223,7 +223,6 @@ body {
   align-items: center;
   gap: 20px;
   width: 80%;
-  background-color: red;
 }
 #servicos .card_container .card {
   /*Card dos serviços*/

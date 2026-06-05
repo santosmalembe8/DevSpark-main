@@ -9,16 +9,26 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --font-arial: Arial, Helvetica;
+  --font-titulo:'titulo',sans-serif;
+  --font-paragrafo:'paragrafo',sans-serif;
   --cor-azul: #035090;
   --cor-fundo: #071a35;
-  --font-titulo2: "titulo2";
+}
+
+@font-face {
+  font-family:'titulo',sans-serif;
+  src: url(font/Titillium/TitilliumMaps29L-800wt.otf);
+}
+@font-face {
+  font-family:'paragrafo',sans-serif;
+  src: url(font/Titillium/TitilliumMaps29L-400wt.otf);
 }
 
 body {
   background: #e2e1e1;
  overflow-x: hidden;
 }
+
 
 .cabecalho {
   /*Incio do header*/
@@ -83,7 +93,7 @@ body {
   height: 100%;
   color: white;
   font-size: clamp(16px, 2.5vw, 20px);
-  font-family: var(--font-arial);
+  font-family: var(--font-titulo);
   font-weight: 800;
 }
 .cabecalho .nav_bar .nav_lista li {
@@ -142,7 +152,7 @@ body {
   /*Textode boas vindas*/
   text-align: center;
   color: white;
-  font-family: var(--font-titulo2);
+  font-family: var(--font-titulo);
   font-weight: bolder;
   font-size: clamp(55px, 5vw, 65px);
   text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
@@ -203,7 +213,7 @@ body {
   /*Titulo da sessão de serviços*/
   margin-top: 20%;
   color: white;
-  font-family: var(--font-titulo2);
+  font-family: var(--font-titulo);
 }
 #servicos .card_container {
   margin-top: 10%;
@@ -247,13 +257,14 @@ body {
 }
 .card .info h2 {
   color: white;
-  font-family: var(--font-arial);
+  font-family: var(--font-titulo);
   margin-top: 3%;
 }
 .card .info p {
   width: 100%;
   color: #ccc;
   font-size: clamp(16px, 3vw, 20px);
+  font-family: var(--font-paragrafo);
 }
 #servicos .card_container .card .imagem img {
   width: 55px;
@@ -270,7 +281,7 @@ body {
   padding: 20px;
 }
 #pacotes .cabeca_pacote h2 {
-  font-family: var(--font-titulo2);
+  font-family: var(--font-titulo);
   font-weight: bolder;
   color: var(--cor-fundo);
   font-size: clamp(25px, 2vw, 30px);
@@ -295,12 +306,12 @@ body {
 #pacotes .card_container .card_pacote .info_pacotes h3 {
   margin: auto auto 6% auto;
   font-size: clamp(25px, 2vw, 30px);
-  font-family: var(--font-arial);
+  font-family: var(--font-titulo);
   font-weight: 600;
 }
 #pacotes .card_container .card_pacote .info_pacotes strong {
   color: var(--cor-azul);
-  font-family: var(--font-arial);
+  font-family: var(--font-titulo);
   font-size: clamp(35px, 2vw, 40px);
   white-space: nowrap;
 }
@@ -309,11 +320,13 @@ body {
   font-size: clamp(20px, 1vw, 30px);
   font-weight: 900;
   margin-right: 2%;
+  font-family: var(--font-paragrafo);
 }
 #pacotes .card_container .card_pacote .info_pacotes p {
   font-size: clamp(17px, 2vw, 20px);
   color: #363535;
   margin-top: 5%;
+  font-family: var(--font-paragrafo);
 }
 #pacotes .card_container .card_pacote .botao {
   margin-top: 10%;
@@ -339,7 +352,7 @@ body {
 }
 #pacotes .card_container .card_pacote .botao button a {
   color: var(--cor-azul);
-  font-family: var(--font-arial);
+  font-family: var(--font-titulo);
   display: block;
   width: 100%;
   height: 100%;
@@ -356,6 +369,7 @@ body {
 }
 #pacotes .card_container #card2 button a {
   color: white;
+  font-family: var(--font-paragrafo);
 }
 
 #pacotes .card_container #card2 > .popular {
@@ -382,7 +396,7 @@ body {
 #pacotes .card_container #card2 .popular h4 {
   color: white;
   text-align: center;
-  font-family: var(--font-arial);
+  font-family: var(--font-titulo);
   font-size: clamp(20px, 2vw, 22px);
 }
 #pacotes .card_container #card3 .popular {
@@ -394,7 +408,7 @@ body {
 #pacotes .card_container #card3 .popular h4 {
   color: white;
   text-align: center;
-  font-family: var(--font-arial);
+  font-family: var(--font-titulo);
   font-size: clamp(20px, 2vw, 22px);
 }
 #pacotes .card_container #card3 button {
@@ -403,6 +417,7 @@ body {
 }
 #pacotes .card_container #card3 button a {
   color: white;
+    font-family: var(--font-paragrafo);
 }
 
 .sugestao {
@@ -423,7 +438,7 @@ body {
 .sugestao .cabeca_sugestao {
   margin-top: -1%;
   color: white;
-  font-family: var(--font-titulo2);
+  font-family: var(--font-titulo);
 }
 .input_container {
   position: relative;
@@ -477,7 +492,7 @@ body {
   padding: 15px 20px 15px 20px;
   background: #014e8e;
   border: none;
-  font-family: var(--font-arial);
+  font-family: var(--font-titulo);
   font-weight: 900;
   cursor: pointer;
   border-radius: 20px;

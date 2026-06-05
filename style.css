@@ -223,6 +223,7 @@ body {
   align-items: center;
   gap: 20px;
   width: 80%;
+  background-color: red;
 }
 #servicos .card_container .card {
   /*Card dos serviços*/

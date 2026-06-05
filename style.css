@@ -10,20 +10,24 @@ html {
 }
 :root {
   --font-titulo:'titulo',sans-serif;
+  --font-titulo2:'sub_titulo',sans-serif;
   --font-paragrafo:'paragrafo',sans-serif;
   --cor-azul: #035090;
   --cor-fundo: #071a35;
 }
 
 @font-face {
-  font-family:'titulo',sans-serif;
+  font-family:'titulo';
   src: url(font/Titillium/TitilliumMaps29L-800wt.otf);
 }
 @font-face {
-  font-family:'paragrafo',sans-serif;
+  font-family:'paragrafo';
   src: url(font/Titillium/TitilliumText22L-250wt.otf);
 }
-
+  @font-face {
+    font-family: 'sub_titulo';
+    src: url(Font/Titillium/TitilliumText22L-600wt.otf);
+  }
 body {
   background: #e2e1e1;
  overflow-x: hidden;
@@ -213,7 +217,7 @@ body {
   /*Titulo da sessão de serviços*/
   margin-top: 20%;
   color: white;
-  font-family: var(--font-titulo);
+  font-family: var(--font-titulo2);
 }
 #servicos .card_container {
   margin-top: 10%;
@@ -257,7 +261,7 @@ body {
 }
 .card .info h2 {
   color: white;
-  font-family: var(--font-titulo);
+  font-family: var(--font-titulo2);
   margin-top: 3%;
 }
 .card .info p {
@@ -281,7 +285,7 @@ body {
   padding: 20px;
 }
 #pacotes .cabeca_pacote h2 {
-  font-family: var(--font-titulo);
+  font-family: var(--font-titulo2);
   font-weight: bolder;
   color: var(--cor-fundo);
   font-size: clamp(25px, 2vw, 30px);
@@ -306,7 +310,7 @@ body {
 #pacotes .card_container .card_pacote .info_pacotes h3 {
   margin: auto auto 6% auto;
   font-size: clamp(25px, 2vw, 30px);
-  font-family: var(--font-titulo);
+  font-family: var(--font-titulo2);
   font-weight: 600;
 }
 #pacotes .card_container .card_pacote .info_pacotes strong {
@@ -396,7 +400,7 @@ body {
 #pacotes .card_container #card2 .popular h4 {
   color: white;
   text-align: center;
-  font-family: var(--font-titulo);
+  font-family: var(--font-titulo2);
   font-size: clamp(20px, 2vw, 22px);
 }
 #pacotes .card_container #card3 .popular {
@@ -438,7 +442,7 @@ body {
 .sugestao .cabeca_sugestao {
   margin-top: -1%;
   color: white;
-  font-family: var(--font-titulo);
+  font-family: var(--font-titulo2);
 }
 .input_container {
   position: relative;

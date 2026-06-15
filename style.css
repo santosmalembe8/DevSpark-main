@@ -229,7 +229,6 @@ body {
   background-color: #014e8e;
   border-radius: 10px;
   margin-top: 10px;
-
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.6s ease-out;
@@ -243,6 +242,7 @@ body {
 .intro p{
   color: var(--cor-paragrafo);
   padding: 6px;
+  margin: 4px;
 }
 
 /* 🔥 SCROLL REVEAL */

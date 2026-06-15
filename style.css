@@ -212,7 +212,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 40vh;
+  height: 45vh;
 }
 
 .intro h2{

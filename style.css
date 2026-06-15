@@ -234,7 +234,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 48vh;
+  height: 50vh;
 }
 
 .intro h2{

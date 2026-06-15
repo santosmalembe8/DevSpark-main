@@ -212,7 +212,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 45vh;
+  height: 47vh;
 }
 
 .intro h2{
@@ -242,9 +242,31 @@ body {
 .intro p{
   color: var(--cor-paragrafo);
   padding: 6px;
-  margin: 4px;
+  margin: 5px;
 }
 
+.intro .saber{
+  display: flex;
+margin: 10px;
+}
+.intro .saber button{
+  padding: 10px;
+  width: 40%;
+  border: none;
+  border-radius: 10px;
+  background-color:#014e8e;
+}
+.intro .saber button:hover{
+  border: 1px solid #014e8e;
+  background-color: transparent;
+  transition: ease-in 0.2s;
+}
+.intro .saber button:hover a{
+  color: #014e8e;
+}
+.intro .saber button a{
+  color: white;
+}
 /* 🔥 SCROLL REVEAL */
 .reveal {
   opacity: 0;

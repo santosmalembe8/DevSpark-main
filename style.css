@@ -15,6 +15,7 @@ html {
   --cor-azul: #035090;
   --cor-fundo: #071a35;
   --cor-paragrafo: #4B5563;
+  --cor-fundo2:#f1f1f1;
 }
 
 @font-face {
@@ -249,7 +250,7 @@ body {
   padding: 10px;
 }
 .intro .saber button{
-  padding: 10px;
+  padding: 15px;
   width: 40%;
   border: none;
   border-radius: 10px;
@@ -265,6 +266,7 @@ body {
 }
 .intro .saber button a{
   color: white;
+  font-family: var(--font-titulo2);
 }
 /* 🔥 SCROLL REVEAL */
 .reveal {
@@ -301,7 +303,7 @@ body {
   align-items: center;
   scroll-margin-top: 30px;
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: var(--cor-fundo2);
 }
 
 #servicos h1{
@@ -334,7 +336,6 @@ body {
   width: 100%;
   height: auto;
   padding: 20px;
-
   opacity: 0;
   transform: translateY(60px) scale(0.95);
   transition: all 0.8s ease-out;
@@ -440,7 +441,7 @@ align-items: center;
 }
 #pacotes .card_container .card_pacote {
   border-radius: 20px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 10px 10px rgba(0, 0, 0, 0.1);
   background-color: white;
   padding: 20px;
   border: none;
@@ -564,6 +565,47 @@ align-items: center;
   color: white;
     font-family: var(--font-paragrafo);
 }
+
+.spark{
+  display: flex;
+  background-color: var(--cor-fundo2);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+  height: 30vh;
+}
+
+.spark .info{
+  text-align: center;
+}
+
+.spark .info h2{
+  font-family: var(--font-titulo2);
+  padding: 10px;
+  color: #014e8e;
+}
+.spark .iniciar_conversa{
+  width: 60%;
+}
+.spark .iniciar_conversa button{
+  padding: 15px;
+  width: 100%;
+  background-color: #014e8e;
+  border: none;
+  border-radius: 10px;
+}
+.spark .iniciar_conversa button a{
+  color: white;
+  font-family: var(--font-titulo2);
+}
+
+.spark .info p{
+  font-family: var(--font-paragrafo);
+  color: var(--cor-paragrafo);
+}
+
 
 .sugestao {
   display: flex;

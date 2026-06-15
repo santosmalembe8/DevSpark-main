@@ -209,6 +209,7 @@ body {
 .intro h2{
     padding: 12px;
     width: 80%;
+    font-family: var(--font-titulo2);
 }
 .intro h2:after{
   content: "";
@@ -221,6 +222,7 @@ body {
 }
 .intro h2 span{
   color: #014e8e;
+  font-family: var(--font-paragrafo)
 }
 
 .intro p{

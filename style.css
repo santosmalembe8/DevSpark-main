@@ -246,8 +246,7 @@ body {
 }
 
 .intro .saber{
-  display: flex;
-margin: 10px;
+  padding: 10px;
 }
 .intro .saber button{
   padding: 10px;

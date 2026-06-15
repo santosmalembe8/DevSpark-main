@@ -14,6 +14,7 @@ html {
   --font-paragrafo:'paragrafo',sans-serif;
   --cor-azul: #035090;
   --cor-fundo: #071a35;
+  --cor-paragrafo: #4B5563;
 }
 
 @font-face {
@@ -154,6 +155,15 @@ body {
 
 #boas_vindas .info h1 {
   /*Textode boas vindas*/
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  line-clamp: 3;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   text-align: center;
   color: white;
   font-family: var(--font-titulo);
@@ -203,14 +213,18 @@ body {
 
 .intro{
   padding: 10px;
-  
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .intro h2{
-    padding: 12px;
-    width: 80%;
-    font-family: var(--font-titulo2);
+  padding: 12px;
+  width: 80%;
+  font-family: var(--font-titulo2);
 }
+
 .intro h2:after{
   content: "";
   display: block;
@@ -219,15 +233,48 @@ body {
   background-color: #014e8e;
   border-radius: 10px;
   margin-top: 10px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease-out;
 }
+
 .intro h2 span{
   color: #014e8e;
-  font-family: var(--font-paragrafo)
+  font-family: var(--font-paragrafo);
 }
 
 .intro p{
+  color: var(--cor-paragrafo);
   padding: 6px;
   width: 95%;
+}
+
+/* 🔥 SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* timing profissional por elemento */
+.intro h2.reveal {
+  transition-duration: 0.9s;
+}
+
+.intro p.reveal {
+  transition-duration: 0.7s;
+}
+
+/* animação da linha do título */
+.intro h2.reveal.active:after {
+  transform: scaleX(1);
 }
 #servicos {
   /*Sessão de serviços*/
@@ -246,8 +293,7 @@ body {
   margin-top: 20%;
   color: var(--cor-fundo);
   font-family: var(--font-titulo2);
-}
-#servicos .card_container {
+}#servicos .card_container {
   margin-top: 10%;
   display: flex;
   flex-direction: column;
@@ -256,8 +302,11 @@ body {
   gap: 20px;
   width: 95%;
 }
+
+/* =========================
+   CARD BASE (teu estilo melhorado)
+========================= */
 #servicos .card_container .card {
-  /*Card dos serviços*/
   display: flex;
   background-color: white;
   justify-content: center;
@@ -267,12 +316,52 @@ body {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: auto;
-  transform: translateY(60px) scale(0.95);
   padding: 20px;
+
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: all 0.8s ease-out;
+  will-change: transform, opacity;
 }
-#servicos .card_container .card.show {
+
+/* estado base visível (fallback teu show antigo) */
+#servicos .card_container .card.active {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+/* =========================
+   ENTRADA ESQUERDA / DIREITA
+========================= */
+.reveal-left {
+  transform: translateX(-80px) translateY(60px) scale(0.95);
+  opacity: 0;
+}
+
+.reveal-right {
+  transform: translateX(80px) translateY(60px) scale(0.95);
+  opacity: 0;
+}
+
+/* estado final */
+.reveal-left.active,
+.reveal-right.active {
+  transform: translateX(0) translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* =========================
+   CONTEÚDO INTERNO
+========================= */
+
+#servicos .card_container .card .imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#servicos .card_container .card .imagem img {
+  width: 55px;
 }
 
 #servicos .card_container .card .info {
@@ -283,22 +372,29 @@ body {
   text-align: center;
   gap: 10px;
 }
+
+#servicos .card_container .card .info::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 5px;
+  background-color: #014e8e;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
 .card .info h2 {
   color: #242424;
   font-family: var(--font-titulo2);
   margin-top: 3%;
 }
+
 .card .info p {
   width: 100%;
-  color: #4B5563;
+  color: var(--cor-paragrafo);
   font-size: clamp(16px, 3vw, 20px);
   font-family: var(--font-paragrafo);
 }
-#servicos .card_container .card .imagem img {
-  width: 55px;
-}
-/*Fim da area de serviçõs*/
-
 /*Incio da sessão dos pacotes*/
 #pacotes {
   margin-top: 5%;
@@ -352,7 +448,7 @@ body {
 }
 #pacotes .card_container .card_pacote .info_pacotes p {
   font-size: clamp(17px, 2vw, 20px);
-  color: #363535;
+  color: var(--cor-paragrafo);
   margin-top: 5%;
   font-family: var(--font-paragrafo);
 }
@@ -532,13 +628,4 @@ body {
 
 /*Fim da sessão de sugestão*/
 
-/*Inicio da footer dos contactos*/
 
-.header-sroll {
-  background-color: red;
-  backdrop-filter: blur(20px);
-  border: 10px solid red;
-}
-.header-sroll .nav_bar a {
-  color: red;
-}

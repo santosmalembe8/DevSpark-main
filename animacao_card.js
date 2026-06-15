@@ -1,18 +1,16 @@
- const cards = document.querySelectorAll('.card');
+const elements = document.querySelectorAll(
+  '.reveal, .reveal-left, .reveal-right'
+);
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target); // anima apenas uma vez
-      }
-    });
-  }, {
-    threshold: 0.1
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
   });
+}, {
+  threshold: 0.15
+});
 
-  cards.forEach((card, index) => {
-    observer.observe(card);
-    // atraso para aparecer em sequência
-    card.style.transitionDelay = `${index * 0.25}s`;
-  });
+elements.forEach(el => observer.observe(el));

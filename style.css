@@ -188,6 +188,7 @@ body {
 
 /* Parágrafo */
 #boas_vindas .info p {
+  font-family: var(--font-paragrafo);
   color: #E5E7EB;
   font-size: 17px;
   line-height: 1.8;

@@ -576,6 +576,7 @@ body {
   background: transparent;
   color: white;
   resize: none;
+  font-family: var(--font-paragrafo);
 }
 
 .input_container label {
@@ -585,6 +586,7 @@ body {
   color: #f9f6f6;
   pointer-events: none;
   transition: 0.3s;
+  font-family: var(--font-titulo2);
 }
 
 /*Wuando clicar para digitar*/

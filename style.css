@@ -353,10 +353,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 #servicos .card_container .card .imagem img {
   width: 55px;
+  display: flex;
+
 }
 
 #servicos .card_container .card .info {

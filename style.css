@@ -136,6 +136,7 @@ body {
 .cabecalho .botao_menu.ativo .fechar {
   display: block;
 }
+
 #boas_vindas {
   position: relative;
   min-height: 100vh;
@@ -215,7 +216,8 @@ body {
 }
 #boas_vindas .contactos .pacotes{
   background-color: var(--cor-azul);
-  padding: 10px;  
+  padding: 12px;  
+  border: none;
 }
 
 /* Estilo base */
@@ -230,8 +232,6 @@ body {
 #boas_vindas .btn-primary {
   color: white;
 }
-
-
 
 
 .intro{
@@ -632,7 +632,7 @@ align-items: center;
   color: var(--cor-paragrafo);
 }
 
-
+/*
 .sugestao {
   display: flex;
   flex-direction: column;
@@ -683,7 +683,7 @@ align-items: center;
   font-family: var(--font-titulo2);
 }
 
-/*Wuando clicar para digitar*/
+Wuando clicar para digitar
 .input_container input:focus + label,
 .input_container input:valid + label,
 .input_container textarea:focus + label,
@@ -717,6 +717,63 @@ align-items: center;
   background-color: #052c62;
 }
 
-/*Fim da sessão de sugestão*/
+Fim da sessão de sugestão*/
 
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--cor-fundo);
+}
+footer .cabeca .cabeca_img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+footer .cabeca .cabeca_img img{
+  width: 100px;
+  height: 100px;
+}
+footer .cabeca .cabeca_img p{
+  color: #ccc;
+  font-family: var(--font-paragrafo);
+}
+.redes_socias{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
 
+footer .links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .links h3{
+  color: white;
+  font-family: var(--font-titulo2);
+}
+footer .links a{
+  font-family: var(--font-paragrafo);
+  text-decoration: none;
+  color: #ccc;
+}
+
+footer .contactos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  color: #ccc;
+  font-family: var(--font-paragrafo);
+}

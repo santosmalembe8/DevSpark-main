@@ -145,6 +145,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  
   background:
     linear-gradient(
       rgba(2, 6, 23, 0.90),
@@ -727,7 +728,7 @@ footer{
   gap: 10px;
   background-color: var(--cor-fundo);
 }
-footer .cabeca .cabeca_img{
+footer .cabeca_img{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -735,11 +736,8 @@ footer .cabeca .cabeca_img{
   text-align: center;
   padding: 10px;
 }
-footer .cabeca .cabeca_img img{
-  width: 100px;
-  height: 100px;
-}
-footer .cabeca .cabeca_img p{
+
+footer .cabeca_img p{
   color: #ccc;
   font-family: var(--font-paragrafo);
 }

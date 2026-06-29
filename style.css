@@ -726,13 +726,13 @@ footer{
   background-color: var(--cor-fundo);
 }
 
-
 footer .cabeca_img p{
-  color: #ccc;
+  color: #f3f1f1;
   font-family: var(--font-paragrafo);
   width: 80%;
   padding: 10px;
 }
+
 .redes_socias{
   display: flex;
   flex-direction: column;
@@ -751,9 +751,8 @@ footer .cabeca_img p{
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #ccc;
+  color: #f3f1f1;
 }
-
 
 footer .links{
   display: flex;
@@ -768,7 +767,7 @@ footer .links h3{
 footer .links a{
   font-family: var(--font-paragrafo);
   text-decoration: none;
-  color: #ccc;
+  color: #f3f1f1;
 }
 
 footer .contactos{
@@ -776,6 +775,14 @@ footer .contactos{
   flex-direction: column;
   padding: 10px;
   gap: 5px;
-  color: #ccc;
+  color: #f3f1f1;
   font-family: var(--font-paragrafo);
+}
+
+footer .contactos a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  color: #f3f1f1;
 }

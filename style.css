@@ -295,7 +295,8 @@ body {
   color: white;
   font-family: var(--font-titulo2);
 }
-/* 🔥 SCROLL REVEAL */
+
+/* SCROLL REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -721,39 +722,44 @@ Wuando clicar para digitar
 Fim da sessão de sugestão*/
 
 footer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  padding: 10px;
   background-color: var(--cor-fundo);
 }
-footer .cabeca_img{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-}
+
 
 footer .cabeca_img p{
   color: #ccc;
   font-family: var(--font-paragrafo);
+  width: 80%;
+  padding: 10px;
 }
 .redes_socias{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   padding: 10px;
+  gap: 20px;
 }
+.redes_socias .titulo h3{
+  color: white;
+  font-family: var(--font-titulo2);
+}
+.redes_socias .icones{
+  display: flex;
+  gap: 10px;
+}
+.redes_socias a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ccc;
+}
+
 
 footer .links{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
+  padding: 10px;
 }
 footer .links h3{
   color: white;
@@ -768,8 +774,6 @@ footer .links a{
 footer .contactos{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 10px;
   gap: 5px;
   color: #ccc;

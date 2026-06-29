@@ -1,5 +1,5 @@
   :root {
-    --cor-principal: #0066FF;
+    --cor-principal:#035090;
     --cor-fundo-chat: #f1f1f1;
     --safe-area-bottom: env(safe-area-inset-bottom);
     --safe-area-top: env(safe-area-inset-top);
@@ -107,7 +107,7 @@
     gap: 4px;
     transition: box-shadow 0.2s;
   }
-  
+
   /*Efeito do input envia quando clicar*/
   .chat-input-wrap:focus-within { 
     box-shadow: 0 0 0 2px var(--cor-principal); 

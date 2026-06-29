@@ -469,7 +469,7 @@ align-items: center;
 }
 #pacotes .card_container .card_pacote {
   border-radius: 20px;
-  box-shadow: -3px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
   background-color: white;
   padding: 20px;
   border: none;
@@ -627,6 +627,8 @@ align-items: center;
 .spark .iniciar_conversa button a{
   color: white;
   font-family: var(--font-titulo2);
+  display: block;
+  width: 100%;
 }
 
 .spark .info p{

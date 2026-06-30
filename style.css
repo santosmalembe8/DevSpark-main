@@ -160,7 +160,7 @@ body {
 }
 
 .flutuante.mostrar img {
-  animation: brilhoAzul 1.5s infinite;
+  animation: brilhoAzul 5s infinite;
 }
 
 @keyframes brilhoAzul {
@@ -712,7 +712,9 @@ align-items: center;
 }
 
 
-.sugestao {
+/*Inicio do formulário*/
+
+.sugestao form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -727,45 +729,32 @@ align-items: center;
   color:var(--cor-azul);
   font-family: var(--font-titulo2);
 }
-.input_container {
+form .input_container {
   position: relative;
-  width: 80%;
+  width: 100%;
   bottom: -10px;
 }
-.input_container input,
+form .input_container input,
 .input_container textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--cor-azul);
+  border: 1px solid var(--cor-paragrafo);
   outline: none;
   font-size: 17px;
   margin-top: 6%;
-  border-radius: 20px;
+  border-radius: 10px;
   background: transparent;
-  color: var(--cor-azul);
   resize: none;
   font-family: var(--font-paragrafo);
 }
 
-.input_container label {
-  position: absolute;
-  top: 30px;
-  left: 12px;
-  color: var(--cor-paragrafo);
-  pointer-events: none;
-  transition: 0.3s;
-  font-family: var(--font-titulo2);
+form .input_container input:focus{
+  border: 1px solid var(--cor-azul);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
-
-Wuando clicar para digitar
-.input_container input:focus + label,
-.input_container input:valid + label,
-.input_container textarea:focus + label,
-.input_container textarea:valid + label {
-  top: 10.5px;
-  left: 10px;
-  font-size: 12px;
-  padding: 0 4px;
+form .input_container textarea:focus{
+  border: 1px solid var(--cor-azul);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
 .input_container textarea {
   margin-bottom: -20%;
@@ -773,8 +762,8 @@ Wuando clicar para digitar
 }
 
 .sugestao .botao {
-  margin-top: 25%;
-  width: 70%;
+  margin-top: 30%;
+  width: 100%;
 }
 .sugestao .botao button {
   width: 100%;
@@ -784,7 +773,7 @@ Wuando clicar para digitar
   font-family: var(--font-titulo);
   font-weight: 900;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   color: white;
 }
 .sugestao .botao button:hover {
@@ -792,7 +781,7 @@ Wuando clicar para digitar
 }
 
 
-
+/*Informações da empresa*/
 footer{
   padding: 10px;
   background-color: var(--cor-fundo);
@@ -874,6 +863,6 @@ footer .final{
   width: 100%;
   padding: 10px;
   text-align: center;
-  color: white;
+  color: #f3f1f1;
   margin: 10px;
 }

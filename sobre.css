@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --font-titulo:'titulo',sans-serif;
+  --font-titulo2:'sub_titulo',sans-serif;
+  --font-paragrafo:'paragrafo',sans-serif;
+  --cor-azul: #035090;
+  --cor-fundo: #071a35;
+  --cor-paragrafo: #4B5563;
+  --cor-fundo2:#f1f1f1;
+}
+
+@font-face {
+  font-family:'titulo';
+  src: url(font/Titillium/TitilliumMaps29L-800wt.otf);
+}
+@font-face {
+  font-family:'paragrafo';
+  src: url(font/Titillium/TitilliumText22L-250wt.otf);
+}
+  @font-face {
+    font-family: 'sub_titulo';
+    src: url(Font/Titillium/TitilliumText22L-600wt.otf);
+  }
+
+body{
+    background-color: var(--cor-fundo2);
+}
+.cabeca_escura{
+    background-color: #071a35;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    height: 12%;
+}
+.cabecalho {
+  /*Incio do header*/
+  backdrop-filter: blur(20px);
+  background: rgba(2, 99, 195, 0.1);
+  display: flex;
+  padding: 10px;
+  height: 60px;
+  margin-left: 4%;
+  border-radius: 50px;
+  width: 93%;
+  position: fixed;
+  top: 3%;
+  z-index: 999;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.cabecalho .nav_bar {
+  /*Inicio do nav*/
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 17%;
+}
+.logotipo {
+  /*Imagem da empresa*/
+  display: flex;
+  position: absolute;
+  left: 4%;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.logotipo img {
+  width: 100px;
+  height: auto;
+}
+
+.cabecalho .nav_bar .nav_lista.show {
+  /*As listas ao aparecer*/
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  border-radius: 30px;
+  padding: 10px;
+  gap: 5px;
+  z-index: 9999;
+  backdrop-filter: blur(20px);
+  background: #071a35;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.cabecalho .nav_bar .nav_lista {
+  /*Listas inicial escondidas*/
+  display: none;
+}
+.cabecalho .nav_bar .nav_lista li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-family: var(--font-titulo);
+  font-weight: 800;
+}
+.cabecalho .nav_bar .nav_lista li {
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+.cabecalho .nav_bar .nav_lista li:hover {
+  /*Ao passar o mouse nas li*/
+  background-color: var(--cor-azul);
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.cabecalho .botao_menu {
+  /*div do menu mobile*/
+  display: flex;
+  position: absolute;
+  right: 5%;
+  top: 25%;
+}
+
+.cabecalho .botao_menu button {
+  /*Botão do menu mobile*/
+  background-color: transparent;
+  border: none;
+}
+.cabecalho .botao_menu button .fechar {
+  /*Botão do menu mobile*/
+  display: none;
+}
+.cabecalho .botao_menu.ativo .abrir {
+  display: none;
+}
+.cabecalho .botao_menu.ativo .fechar {
+  display: block;
+}
+
+
+.conteudo_principal{
+    margin-top: 105px;
+}
+
+.conteudo_principal .sobre{
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #035090;
+    width:100px;
+    color: var(--cor-azul);
+    margin-top: 10px;
+}
+
+.intro{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+}
+
+.intro h2{
+  padding: 12px;
+  width: 80%;
+  font-size: clamp(30px, 1vw, 40px);
+  font-family: var(--font-titulo2);
+}
+
+.intro h2:after{
+  content: "";
+  display: block;
+  width: 70px;
+  height: 5px;
+  background-color: #014e8e;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.intro h2 span{
+  color: #014e8e;
+  font-family: var(--font-paragrafo);
+}
+
+.intro p{
+  color: var(--cor-paragrafo);
+  padding: 6px;
+  margin: 5px;
+}
+
+.intro .saber{
+  padding: 10px;
+}
+.intro .saber button{
+  padding: 15px;
+  width: 40%;
+  border: none;
+  border-radius: 10px;
+  background-color:#014e8e;
+}
+.intro .saber button:hover{
+  border: 1px solid #014e8e;
+  background-color: transparent;
+  transition: ease-in 0.2s;
+}
+.intro .saber button:hover a{
+  color: #014e8e;
+}
+.intro .saber button a{
+  color: white;
+  font-family: var(--font-titulo2);
+}
+
+.area_cards .card_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 90%;
+}
+.area_cards .card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.area_cards .imagem{
+    padding: 12px;
+    border-radius: 50px;
+    background-color: var(--cor-azul);
+}

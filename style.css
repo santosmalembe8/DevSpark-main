@@ -865,4 +865,7 @@ footer .final{
   text-align: center;
   color: #f3f1f1;
   margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -136,7 +136,15 @@ body {
 .cabecalho .botao_menu.ativo .fechar {
   display: block;
 }
-
+.flutuante{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  position: fixed;
+  right:0;
+  bottom: 20px;
+  z-index: 10;
+}
 #boas_vindas {
   position: relative;
   min-height: 100vh;
@@ -240,7 +248,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50vh;
+  height: auto;
 }
 
 .intro h2{

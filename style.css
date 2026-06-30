@@ -681,6 +681,36 @@ align-items: center;
   color: var(--cor-paragrafo);
 }
 
+.divisor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--cor-fundo2);
+}
+
+.divisor::before,
+.divisor::after{
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #1f6cb8;
+    opacity: .4;
+}
+
+.icone{
+    width: 55px;
+    height: 55px;
+    margin: 0 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,.12);
+    border: 2px solid rgba(31,108,184,.2);
+}
+
 
 .sugestao {
   display: flex;
@@ -845,4 +875,5 @@ footer .final{
   padding: 10px;
   text-align: center;
   color: white;
+  margin: 10px;
 }

@@ -149,12 +149,14 @@ body{
 }
 
 .conteudo_principal .sobre{
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
-    border: 1px solid #035090;
-    width:100px;
+    border: 2px solid #035090;
+    width:120px;
     color: var(--cor-azul);
-    margin-top: 10px;
+    margin: 10px 10px auto;
+    text-align: center;
+    font-family: var(--font-titulo2);
 }
 
 .intro{
@@ -168,7 +170,7 @@ body{
 .intro h2{
   padding: 12px;
   width: 80%;
-  font-size: clamp(30px, 1vw, 40px);
+  font-size: clamp(30px, 1vw, 35px);
   font-family: var(--font-titulo2);
 }
 
@@ -223,6 +225,7 @@ body{
     align-items: center;
     justify-self: center;
     width: 90%;
+    gap: 10px;
 }
 .area_cards .card{
     width: 100%;
@@ -232,9 +235,40 @@ body{
     align-items: center;
     box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    border-radius: 10px;
 }
 .area_cards .imagem{
-    padding: 12px;
-    border-radius: 50px;
+    padding: 10px;
+    border-radius: 100%;
     background-color: var(--cor-azul);
+}
+.area_cards .imagem img{
+    display: flex;
+    justify-content: center;
+}
+
+.area_cards .card h2{
+    margin-top: 7px;
+    color: #242424;
+    font-family: var(--font-titulo2);
+    text-align: center;
+}
+.area_cards .card h2:after{
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  background-color: #014e8e;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.area_cards .card p{
+    text-align: center;
+    padding: 10px;
+    font-family: var(--font-paragrafo);
+    color: var(--cor-paragrafo);
 }

@@ -681,7 +681,7 @@ align-items: center;
   color: var(--cor-paragrafo);
 }
 
-/*
+
 .sugestao {
   display: flex;
   flex-direction: column;
@@ -690,16 +690,11 @@ align-items: center;
   height: 550px;
   padding: 10px;
   position: relative;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
-    url(imagem/fundo/fundo3.jpg);
-  background-size: cover;
-  background-position: 43%;
-  background-repeat: no-repeat;
+  background-color: var(--cor-fundo2);
 }
 .sugestao .cabeca_sugestao {
   margin-top: -1%;
-  color: white;
+  color:var(--cor-azul);
   font-family: var(--font-titulo2);
 }
 .input_container {
@@ -711,13 +706,13 @@ align-items: center;
 .input_container textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--cor-azul);
   outline: none;
   font-size: 17px;
   margin-top: 6%;
   border-radius: 20px;
   background: transparent;
-  color: white;
+  color: var(--cor-azul);
   resize: none;
   font-family: var(--font-paragrafo);
 }
@@ -726,7 +721,7 @@ align-items: center;
   position: absolute;
   top: 30px;
   left: 12px;
-  color: #f9f6f6;
+  color: var(--cor-paragrafo);
   pointer-events: none;
   transition: 0.3s;
   font-family: var(--font-titulo2);
@@ -766,7 +761,7 @@ Wuando clicar para digitar
   background-color: #052c62;
 }
 
-Fim da sessão de sugestão*/
+
 
 footer{
   padding: 10px;

@@ -191,13 +191,15 @@ body{
 
 .intro p{
   color: var(--cor-paragrafo);
-  padding: 6px;
+  padding: 10px;
   margin: 5px;
 }
 
 .intro .saber{
   padding: 10px;
 }
+
+
 .intro .saber button{
   padding: 15px;
   width: 40%;
@@ -205,14 +207,18 @@ body{
   border-radius: 10px;
   background-color:#014e8e;
 }
+
+
 .intro .saber button:hover{
   border: 1px solid #014e8e;
   background-color: transparent;
   transition: ease-in 0.2s;
 }
+
 .intro .saber button:hover a{
   color: #014e8e;
 }
+
 .intro .saber button a{
   color: white;
   font-family: var(--font-titulo2);

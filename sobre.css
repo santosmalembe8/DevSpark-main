@@ -156,6 +156,9 @@ body{
     color: var(--cor-azul);
     margin: 10px 10px auto;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--font-titulo);
 }
 
@@ -164,7 +167,6 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: auto;
 }
 
 .intro h2{
@@ -193,35 +195,27 @@ body{
   color: var(--cor-paragrafo);
   padding: 7px;
   margin: 5px;
+  text-align: left;
 }
 
-.intro .saber{
+.area_cards .cabeca_info{
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px auto;
+  width: 70%;
+  text-align: center;
 }
-
-.intro .saber button{
-  padding: 15px;
-  width: 40%;
-  border: none;
-  border-radius: 10px;
-  background-color:#014e8e;
-}
-
-.intro .saber button:hover{
-  border: 1px solid #014e8e;
-  background-color: transparent;
-  transition: ease-in 0.2s;
-}
-
-.intro .saber button:hover a{
-  color: #014e8e;
-}
-
-.intro .saber button a{
-  color: white;
+.area_cards .cabeca_info h2{
   font-family: var(--font-titulo2);
+  padding: 5px;
+  color: var(--cor-fundo);
 }
 
+.area_cards .cabeca_info p{
+  font-family: var(--font-paragrafo);
+  color: var(--cor-paragrafo);
+}
 .area_cards .card_container{
     display: flex;
     flex-direction: column;
@@ -278,12 +272,32 @@ body{
 }
 
 .area_valores{
+  margin: 5px;
   padding: 10px;
+  background: linear-gradient( 180DEG, #f1f9ff 0%, #eef4ff 50%, #ffffff 100%) ;
 }
 .area_valores .valores_container{
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, 1fr);
+}
+.area_valores .cabeca_info{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px auto;
+  width: 70%;
+  text-align: center;
+}
+.area_valores .cabeca_info h2{
+  font-family: var(--font-titulo2);
+  padding: 5px;
+  color: var(--cor-fundo);
+}
+
+.area_valores .cabeca_info p{
+  font-family: var(--font-paragrafo);
+  color: var(--cor-paragrafo);
 }
 .area_valores .valores{
   background-color: var(--cor-fundo);
@@ -324,6 +338,7 @@ body{
   box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 10px;
+  margin: 5px auto;
   background-color: white;
 }
 .fale_conosco .imagem{

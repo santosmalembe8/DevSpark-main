@@ -274,7 +274,6 @@ body{
 .area_valores{
   margin: 5px;
   padding: 10px;
-  background: linear-gradient( 180DEG, #f1f9ff 0%, #eef4ff 50%, #ffffff 100%) ;
 }
 .area_valores .valores_container{
   display: grid;

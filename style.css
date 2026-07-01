@@ -316,6 +316,7 @@ body {
   color: var(--cor-paragrafo);
   padding: 6px;
   margin: 5px;
+  text-align: left;
 }
 
 .intro .saber{
@@ -338,6 +339,8 @@ body {
 }
 .intro .saber button a{
   color: white;
+  display: block;
+  width: 100%;
   font-family: var(--font-titulo2);
 }
 
